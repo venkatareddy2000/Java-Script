@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Parse Vs JSON Stringify</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        let personalDetails = {
+            name: "Challa Venkata Reddy",
+            age: "23"
+        }
+        console.log(personalDetails)
+        let objectToString = JSON.stringify(personalDetails)
+        console.log(objectToString)
+        let stringifyToObject = JSON.parse(objectToString)
+        console.log(stringifyToObject)
+    </script>
+</body>
+
+</html>

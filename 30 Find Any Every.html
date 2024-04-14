@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find Any Every</title>
+</head>
+
+<body>
+  <script type="text/javascript">
+    let places = ["Hyderabad", "Vijayawada", "Vizag", "Chennai"]
+    //   let place = places.find(findPlace)
+    let place = places.some(findPlace)
+    function findPlace(element) {
+      return element.startsWith("C")
+    }
+    console.log(place)
+    let marks = [20, 35, 98]
+    let pass = marks.every(isPass)
+    function isPass(mark) {
+      return mark > 35
+    }
+    console.log(pass)
+  </script>
+</body>
+
+</html>

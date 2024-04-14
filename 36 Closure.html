@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        function parent() {
+            let num = 20
+            function child() {
+                console.log(num)
+            }
+            return child
+        }
+        let result = parent()
+        result()
+    </script>
+</body>
+
+</html>

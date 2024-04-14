@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reduce</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        let numbers = [2, 1, 5, 3, 0, 10]
+        let maximumNumber = numbers.reduce(maximum, numbers[0])
+        function maximum(accumulator, element) {
+            if (accumulator > element) {
+                return accumulator
+            }
+            else {
+                return element
+            }
+        }
+        console.log(maximumNumber)
+    </script>
+</body>
+
+</html>

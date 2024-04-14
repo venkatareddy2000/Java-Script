@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Inheritance</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        let object1 = {
+            name: "Challa Vennkata Reddy",
+            age: "22"
+        }
+        console.log(object1)
+        let object2 = Object.create(object1)
+        object2.place = "Hyderabad"
+        console.log(object2)
+        let object3 = Object.create(object2)
+        object3.phone = "6302744428"
+        console.log(object3)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular expression</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        let expression = /[a89]/
+        console.log(expression.test("a"))
+
+        let expression1 = /[^a89]/
+        console.log(expression1.test("ac"))
+
+        let expression2 = /[0-9]/
+        console.log(expression2.test("98"))
+
+        let expression3 = /[a-z]/
+        console.log(expression3.test("AB"))
+
+        let expression4 = /[A-Z]/
+        console.log(expression4.test("ab"))
+
+        // Zero or more occurrences (*)
+        let pattern1 = /go*d/;
+        console.log(pattern1.test("god")); // true
+        console.log(pattern1.test("good")); // true
+        console.log(pattern1.test("gooood")); // true
+        console.log(pattern1.test("gd")); // false
+
+        // One or more occurrences (+)
+        let pattern2 = /go+d/;
+        console.log(pattern2.test("god")); // true
+        console.log(pattern2.test("good")); // true
+        console.log(pattern2.test("gooood")); // true
+        console.log(pattern2.test("gd")); // false
+
+        // Zero or one occurrence (?)
+        let pattern3 = /go?d/;
+        console.log(pattern3.test("god")); // true
+        console.log(pattern3.test("gd")); // true
+        console.log(pattern3.test("good")); // false
+
+        // Specific number of occurrences ({n})
+        let pattern4 = /go{2}d/;
+        console.log(pattern4.test("good")); // true
+        console.log(pattern4.test("god")); // false
+        console.log(pattern4.test("gooood")); // false
+
+        // Range of occurrences ({n, m})
+        let pattern5 = /go{2,4}d/;
+        console.log(pattern5.test("good")); // true
+        console.log(pattern5.test("god")); // false
+        console.log(pattern5.test("gooood")); // true
+        console.log(pattern5.test("goooooood")); // false
+
+    </script>
+</body>
+
+</html>

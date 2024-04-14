@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resize Window</title>
+    <style>
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>This is a parent window</h1>
+        <button onclick="openNewWindow()">Open Window</button> <br>
+        <button onclick="closeNewWindow()">Close Window</button>
+        <button onclick="moveToWindow()">Move To Window</button>
+        <button onclick="moveByWindow()">Move By Window</button>
+        <button onclick="resizeToWindow()">Resize To Window</button>
+        <button onclick="resizeByWindow()">Resize By Window</button>
+    </div>
+    <script type="text/javascript">
+        var reference;
+
+        function openNewWindow() {
+            reference = window.open("45 Child.html", "_blank", "width=400px,height=200px,left=200px,top=100px");
+        }
+
+        function closeNewWindow() {
+            reference.close();
+        }
+
+        function moveToWindow() {
+            reference.moveTo(800, 100);
+        }
+
+        function moveByWindow() {
+            reference.moveBy(200, 100);
+        }
+
+        function resizeToWindow() {
+            reference.resizeTo(600, 400);
+        }
+
+        function resizeByWindow() {
+            reference.resizeBy(200, 100);
+        }
+    </script>
+
+</body>
+
+</html>

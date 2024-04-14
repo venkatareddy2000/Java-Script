@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memorization</title>
+</head>
+
+<body>
+    <script>
+        let previousResult = {}
+        function sumOfNumbers(number) {
+            let result = 0
+            if (number in previousResult) {
+                return previousResult[number]
+            } else {
+                for (i = 0; i < number; i++) {
+                    result = result + i
+                }
+                return result
+                previousResult[n] = result
+            }
+        }
+        console.time()
+        console.log("Started")
+        console.log(sumOfNumbers(100))
+        console.timeEnd()
+        console.time()
+        console.log("Started")
+        console.log(sumOfNumbers(100))
+        console.timeEnd()
+    </script>
+</body>
+
+</html>

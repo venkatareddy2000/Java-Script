@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Traversal Example</title>
+    <style>
+        .parent {
+            background-color: lightblue;
+            padding: 10px;
+        }
+
+        .child {
+            background-color: lightgreen;
+            padding: 5px;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent" id="parent">
+        <div class="child">Child 1</div>
+        <div class="child">Child 2</div>
+        <div class="child">Child 3</div>
+    </div>
+
+    <script>
+
+        var parent = document.getElementById('parent');
+        console.log('Parent Element:', parent);
+
+        var firstChild = parent.firstChild;
+        console.log('First Child Element:', firstChild);
+
+        var nextSibling = firstChild.nextSibling;
+        console.log('Next Sibling of First Child Element:', nextSibling);
+
+        var childNodes = parent.childNodes;
+        console.log('Child Nodes:');
+        for (var i = 0; i < childNodes.length; i++) {
+            console.log(childNodes[i]);
+        }
+
+        var firstChildElement = document.querySelector('.child');
+        console.log('First Child Element selected with querySelector:', firstChildElement);
+    </script>
+</body>
+
+</html>

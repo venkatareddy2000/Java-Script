@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optional Chaining</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        const user = {
+            name: 'John',
+            address: {
+                city: 'New York',
+                zipcode: 12345
+            }
+        };
+
+        // Without optional chaining
+        const city1 = user.address.city; // Accessing nested property directly
+        console.log(city1); // Output: "New York"
+
+        // With optional chaining
+        const city2 = user.address?.city; // Safely accessing nested property using optional chaining
+        console.log(city2); // Output: "New York"
+
+        // Accessing a property that may not exist
+        const country = user.address?.country; // Safe access even if address doesn't have a country property
+        console.log(country); // Output: undefined
+
+    </script>
+</body>
+
+</html>

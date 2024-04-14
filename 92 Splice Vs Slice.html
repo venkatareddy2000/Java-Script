@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Splice Vs Slice</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        array = [10, 20, 30, 40, 50]
+        console.log(array.splice(5, 0, 60, 70, 80))
+        console.log(array)
+        console.log(array.splice(5, 1, 100))
+        console.log(array)
+        console.log(array.splice(-1, 1, 200))
+        console.log(array)
+        console.log(array.slice(5, 7))
+    </script>
+</body>
+
+</html>

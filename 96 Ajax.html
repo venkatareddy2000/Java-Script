@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax</title>
+</head>
+
+<body>
+    <input type="button" id="btn" value="Get Data"> <!-- Changed type to "button" -->
+    <div id="data">
+
+    </div>
+    <script type="text/javascript">
+        let button = document.getElementById("btn");
+        let text = document.getElementById("data");
+
+        button.addEventListener('click', getData);
+
+        function getData() {
+            let xhr = new XMLHttpRequest();
+            xhr.open('GET', '47 Ajax.txt', true);
+            xhr.send();
+            xhr.onload = function () {
+                if (xhr.status === 200) {
+                    text.innerText = xhr.responseText;
+                } else {
+                    console.error('Request failed:', xhr.status);
+                }
+            };
+
+            xhr.onerror = function () {
+                console.error('Request failed');
+            };
+        }
+    </script>
+</body>
+
+</html>

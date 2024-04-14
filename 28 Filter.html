@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filter</title>
+</head>
+
+<body>
+  <script type="text/javascript">
+    let birthYears = [2000, 2001, 2002]
+    let age = birthYears.filter(evenAge)
+    function evenAge(element) {
+      return element % 2 == 0
+    }
+    console.table(age)
+  </script>
+</body>
+
+</html>

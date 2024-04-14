@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript Interview Questions</title>
+</head>
+
+<body>
+    <div>
+        <p>This is paragraph1</p>
+        <p>This is paragraph2</p>
+    </div>
+    <script type="text/javascript">
+        let div = document.querySelector('div')
+        let p3 = document.createElement('p')
+        p3.innerText = "This is paragraph3"
+        div.appendChild(p3)
+        let p1 = document.querySelector('p')
+        div.insertBefore(p3, p1)
+    </script>
+</body>
+
+</html>

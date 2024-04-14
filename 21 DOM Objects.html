@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Objects</title>
+</head>
+
+<body>
+    <div id="container">
+        <h1 class="heading">Hi Venkata Reddy</h1>
+        <h1 class="heading">Hi Challa</h1>
+    </div>
+    <script type="text/javascript">
+        let container = document.getElementById("container")
+        console.log(container)
+        let heading = document.getElementsByClassName("heading")
+        console.log(heading)
+        let tag = document.getElementsByTagName("h1")
+        console.log(tag)
+        let query = document.querySelector("h1")
+        console.log(query)
+        let queryAll = document.querySelectorAll("h1")
+        console.log(queryAll)
+        console.log(document)
+        console.log(document.head)
+        console.log(document.title)
+        console.log(document.body)
+        console.log(document.scripts)
+    </script>
+</body>
+
+</html>

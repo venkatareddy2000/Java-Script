@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #btn {
+            box-sizing: border-box;
+            width: 100px;
+            display: block;
+            background-color: blue;
+            color: white;
+            padding: 10px;
+            border-radius: 2px solid blue;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <input type="submit" id="btn" value="Get Data">
+        <div id="data">
+
+        </div>
+    </div>
+    <script type="text/javascript">
+        let button = document.getElementById("btn");
+        let text = document.getElementById("data");
+
+        button.addEventListener('click', getData);
+
+        function getData() {
+            let xhr = new XMLHttpRequest();
+            xhr.open('GET', '48 Ajax.json', true);
+            xhr.send();
+            xhr.onload = function () {
+                if (xhr.status == 200) {
+                    let result = xhr.responseText
+                    result = JSON.parse(result)
+                    let str = `<table border='2'><tr>`
+                    for (key in result) {
+                        str = str + `<th>${key}</th>`
+                    }
+                    str = str + `</tr><tr>`
+                    for (key in result) {
+                        str = str + `<td>${result[key]}</td>`
+                    }
+                    str = str + `</tr></table>`
+                    data.innerHTML = str
+                }
+                else {
+                    data.innerHTML = "File Not Found"
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

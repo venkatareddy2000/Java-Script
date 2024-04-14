@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance</title>
+</head>
+
+<body>
+    <script>
+        class Person {
+            name
+            mobileNumber
+            constructor(name, mobileNumber) {
+                this.name = name
+                this.mobileNumber = mobileNumber
+            }
+            getPersonalDetails() {
+                console.log("Name : " + this.name + "\n" + "Mobile Number : " + this.mobileNumber)
+            }
+        }
+        let person1 = new Person("Challa Venkata Reddy", "6302744428")
+        person1.getPersonalDetails()
+        class Employee extends Person {
+            salary
+            company
+            constructor(name, mobileNumber, salary, company) {
+                super(name, mobileNumber)
+                this.salary = salary
+                this.company = company
+            }
+            getEmployeeDetails() {
+                console.log("Name : " + this.name + "\n" + "Mobile Number : " + this.mobileNumber + "\n" + "Salary : " + this.salary + "\n" + "Company : " + this.company)
+            }
+            getOfficeDetails() {
+                console.log("Salary : " + this.salary + "\n" + "Company : " + this.company)
+            }
+        }
+        let employee = new Employee("Challa Venkata Reddy", "6302744428", "30000", "DXC Technology")
+        employee.getEmployeeDetails()
+        employee.getPersonalDetails()
+        employee.getOfficeDetails()
+    </script>
+</body>
+
+</html>

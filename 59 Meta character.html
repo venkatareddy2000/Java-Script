@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meta Character</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+
+        // Dot (.)
+        let patternDot = /a.c/;
+        console.log(patternDot.test("abc")); // true
+        console.log(patternDot.test("axc")); // true
+        console.log(patternDot.test("a\nc")); // false
+
+        // Caret (^)
+        let patternCaret = /^hello/;
+        console.log(patternCaret.test("hello world")); // true
+        console.log(patternCaret.test("world hello")); // false
+
+        // Dollar sign ($)
+        let patternDollar = /world$/;
+        console.log(patternDollar.test("hello world")); // true
+        console.log(patternDollar.test("world hello")); // false
+
+        // Square brackets ([])
+        let patternSquare = /[aeiou]/;
+        console.log(patternSquare.test("hello")); // true
+        console.log(patternSquare.test("world")); // true
+        console.log(patternSquare.test("xyz")); // false
+
+        // Pipe (|)
+        let patternPipe = /hello|world/;
+        console.log(patternPipe.test("hello")); // true
+        console.log(patternPipe.test("world")); // true
+        console.log(patternPipe.test("hello world")); // true
+
+        // Backslash (\)
+        let patternBackslash = /\./; // Matches a literal dot
+        console.log(patternBackslash.test("hello.world")); // true
+
+    </script>
+</body>
+
+</html>

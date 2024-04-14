@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This Keyword</title>
+</head>
+
+<body>
+    <button id="first">Click to Remove Me!</button>
+
+    <script type="text/javascript">
+
+        //In an object method, this refers to the object
+        const person = {
+            name: "John",
+            greet: function () {
+                console.log("Hello, my name is " + this.name);
+            }
+        };
+        person.greet(); // Output: "Hello, my name is John"
+
+        //Alone, this refers to the global object
+        console.log(this)
+
+        //In a function, this refers to the global object
+        function myFunction() {
+            console.log(this);
+        }
+        myFunction(); // Output: true (in a browser environment)
+
+        //In a function, in strict mode, this is undefined
+        "use strict";
+        function myFunction() {
+            console.log(this);
+        }
+        myFunction(); // Output: true
+
+        //In an event, this refers to the element that received the event
+        document.getElementById("first").onclick = function () {
+            console.log(this)
+        }
+
+
+    </script>
+</body>
+
+</html>

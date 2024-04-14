@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call Bind Apply</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var salary = 20000
+        function getSalary(a, b) {
+            console.log(this.salary)
+            console.log(window.salary)
+            console.log(salary)
+            console.log(a, b)
+        }
+
+        employee = {
+            salary: 30000
+        }
+        myObject = {
+            getSalary: function (a, b) {
+                var salary = 40000
+                console.log(this.salary)
+            }
+        }
+        console.log("call method")
+        getSalary.call(employee, 67, 80)
+        console.log("apply method")
+        getSalary.apply(employee, [67, 90])
+        console.log("bind method")
+        var result = getSalary.bind(employee, 60, 100)
+        result()
+        console.log("call method")
+        myObject.getSalary.call(employee, 67, 80)
+        console.log("apply method")
+        myObject.getSalary.apply(employee, [67, 90])
+        console.log("bind method")
+        var result = myObject.getSalary.bind(employee, 60, 100)
+        result()
+
+    </script>
+</body>
+
+</html>

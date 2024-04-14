@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shallow Copy Vs Deep Copy</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        array1 = [10, 20, 30, 40]
+        array2 = array1
+        array2.push(50)
+        console.log(array1)
+        console.log(array2)
+        array3 = Object.assign([], array1)
+        console.log(array3)
+        array3.push(60)
+        console.log(array3)
+    </script>
+</body>
+
+</html>

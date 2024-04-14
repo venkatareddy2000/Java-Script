@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pass by Value and Pass by Reference</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        /*Call by value*/
+        let number = 10;
+        function test(num) {
+            num = num + 1
+            console.log("Inside the function : " + num)
+        }
+        console.log("Before calling the function : " + number)
+        test(number)
+        console.log("After calling the function : " + number)
+        /*Call by reference*/
+        let array = [10, 20, 30];
+        function test(num) {
+            num[0] = num[0] + 1
+            console.log("Inside the function : " + num[0])
+        }
+        console.log("Before calling the function : " + array)
+        test(array)
+        console.log("After calling the function : " + array)
+    </script>
+</body>
+
+</html>

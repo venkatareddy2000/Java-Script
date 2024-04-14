@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Object</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        let date = new Date()
+        console.log(date)
+        console.log("Time : " + date.getTime())
+        console.log("Year : " + date.getFullYear())
+        console.log("Month : " + date.getMonth())
+        console.log("Date : " + date.getDate())
+        console.log("Day : " + date.getDay())
+        let date1 = new Date(10000)
+        console.log(date1)
+        let date2 = new Date(24 * 60 * 60 * 1000)
+        console.log(date2)
+        let date3 = new Date('2024-01-29')
+        console.log(date3)
+        let date4 = new Date(2024, 1, 21)
+        console.log(date4)
+    </script>
+</body>
+
+</html>

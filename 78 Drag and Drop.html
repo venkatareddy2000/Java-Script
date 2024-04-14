@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and Drop</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #b6caef;
+        }
+
+        .container {
+            position: fixed;
+            height: 200px;
+            width: 200px;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            user-select: none;
+        }
+
+        .container:hover {
+            cursor: move;
+        }
+
+        #text {
+            color: #4a82eb;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <span id="text">Drag this</span>
+    </div>
+    <script type="text/javascript">
+        let isDragging = false;
+        const container = document.querySelector('.container');
+
+        container.addEventListener('mousedown', function (e) {
+            isDragging = true;
+        });
+
+        container.addEventListener('mouseup', function (e) {
+            isDragging = false;
+        });
+
+        document.addEventListener('mousemove', function (e) {
+            if (isDragging) {
+                container.style.left = e.clientX - container.offsetWidth / 2 + 'px';
+                container.style.top = e.clientY - container.offsetHeight / 2 + 'px';
+            }
+        });
+    </script>
+</body>
+
+</html>

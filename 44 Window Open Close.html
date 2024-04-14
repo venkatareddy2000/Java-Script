@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Open Close</title>
+    <style>
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>This is a parent window</h1>
+        <button onclick="openNewWindow()">Open Window</button> <br>
+        <button onclick="closeewWindow()">Close Window</button>
+    </div>
+    <script type="text/javascript">
+        var reference
+        function openNewWindow() {
+            reference = window.open("44 Child.html", "_blank", "width:400px,height:400px,top:100px,left:200px")
+        }
+        function closeNewWindow() {
+            reference.close()
+        }
+    </script>
+</body>
+
+</html>

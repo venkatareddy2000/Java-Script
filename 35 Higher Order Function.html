@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Higher Order Function</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        function add(a, b) {
+            console.log("Addition of given two numbers is : " + (a + b))
+        }
+        function product(a, b) {
+            console.log("Multiplication of two numbers is : " + (a * b))
+        }
+        //calculator is the higher order function as it takes another function as an argument
+        function calculator(value1, value2, operation) {
+            operation(value1, value2)
+        }
+        calculator(10, 20, add)
+        //returing a  function
+        function first() {
+            console.log("This is the first function")
+            return second
+        }
+        function second() {
+            console.log("This is the second function")
+        }
+        let result = first()
+        result()
+    </script>
+</body>
+
+</html>
